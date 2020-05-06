@@ -7,10 +7,10 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/', function (req, res) {
-    res.send('Hola Mundo');
+app.get('/usuario', function (req, res) {
+    res.json('get Usuario');
 });
-app.post('/', function (req, res) {
+app.post('/usuario', function (req, res) {
     let body = req.body;
     if (body.nombre === undefined){
         res.status(400).json({
@@ -22,10 +22,10 @@ app.post('/', function (req, res) {
     }
 
 });
-app.put('/', function (req, res) {
+app.put('/usuario', function (req, res) {
     res.json('put Usuario');
 });
-app.delete('/', function (req, res) {
+app.delete('/usuario', function (req, res) {
     res.json('delete Usuario');
 });
 
