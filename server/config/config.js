@@ -18,3 +18,6 @@ if (process.env.NODE_ENV === 'dev'){
     urlDB ='mongodb+srv://Kentakun77:Veronica007@cluster0-7qteq.mongodb.net/test';
 }
 process.env.URLDB = urlDB;
+
+//Google Client ID
+process.env.CLIENT_ID = process.env.CLIENT_ID || '1063628434729-bvmc727vb8hsg998s7i3hnbg3cl2bcs4.apps.googleusercontent.com';
